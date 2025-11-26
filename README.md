@@ -1,9 +1,9 @@
 # Randall’s Recorder – Controller Firmware
 **Microcontroller firmware for the custom Controller PCB that interfaces with the RunCam Split-H DVR.**
 
-This repository contains the firmware, hardware notes, and PlatformIO project structure for the *Randall’s Recorder* wearable DVR controller. The controller PCB provides power management, LED-based state sensing, buzzer feedback, and (in Phase 2) UART-based full digital control.
+This repository contains the firmware, hardware notes, and PlatformIO project structure for the *Randall’s Recorder* wearable controller. The controller PCB provides power management, LED-based state sensing, buzzer feedback.
 
-The PCB and its staged development plan are defined in the Controller PCB document, and the DVR reference behaviour is taken from the RunCam Split-H user manual.
+The PCB and its staged development plan are defined in the Controller PCB document, and the DVR reference behaviour is taken from the Cam user manual.
 
 ---
 
@@ -15,7 +15,10 @@ The PCB and its staged development plan are defined in the Controller PCB docume
 /include
 /lib
 /test
-    test_basic/     – Unit tests & hardware simulation stubs
+    dvr-status-edge-detect.cpp
+    flashPB1_flashPB3_buzz.cpp
+    fuelgage.cpp
+    mr-ed-adc.cpp
 platformio.ini
 README.md
 ```
@@ -35,7 +38,7 @@ The `test/` directory includes:
 - Pin-state simulation  
 - Debounce tests  
 - LED-pulse decoding tests  
-- Mock DVR behaviours
+- Mock recorder behaviours
 
 Run tests:
 
@@ -57,7 +60,7 @@ pio test -e attiny85
 
 Implements:
 
-- DVR LED sensing  
+- Indicator LED sensing  
 - Button input  
 - Buzzer feedback  
 - Battery-level sensing  
