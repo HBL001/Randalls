@@ -1,5 +1,5 @@
 # Randall’s Recorder – Controller Firmware
-**Microcontroller firmware for the custom Controller PCB that interfaces with the RunCam Split-H DVR.**
+**Microcontroller firmware for the custom Controller PCB that interfaces with the Cam.**
 
 This repository contains the firmware, hardware notes, and PlatformIO project structure for the *Randall’s Recorder* wearable controller. The controller PCB provides power management, LED-based state sensing, buzzer feedback.
 
