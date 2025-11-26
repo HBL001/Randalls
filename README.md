@@ -51,20 +51,6 @@ pio test -e attiny85
 
 ---
 
-# 🎥 System Overview: DVR LED Behaviours
-
-Based on the RunCam Split‑H manual:
-
-- **Solid** — Idle  
-- **Slow blink** — Recording  
-- **Fast red blink** — SD card error  
-- **Slow red blink (2s) then shutdown)** — Boot abnormal  
-- **Fast red blink → off** — Firmware update
-
-The controller reads these LED states (Stage 1) and later switches to UART (Stage 2).
-
----
-
 # 🧩 Development Stages
 
 ## Stage 1 — LED-Based Status Monitoring
@@ -84,16 +70,6 @@ Primary firmware includes logic for:
 - LED interpretation  
 - Button-to-action mapping  
 - Power management  
-
-## Stage 2 — Unified UART Control
-
-Planned features:
-
-- UART bi‑directional link  
-- 1‑plug DVR interface (power + data)  
-- Debug header  
-- Extended command set  
-- Reduced wiring complexity  
 
 ---
 
